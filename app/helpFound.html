@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<!--
+    by: Robert Airth
+    last modified: 4/4/2020
+
+    you can run this using the URL:
+    
+
+-->
+
+<head>
+    <title>HelpAlert Request Summary</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <h2> Your request for help has been answered! </h2>
+    <form method="get"
+          action="FILL IN PROPER PAGE HERE">
+        <fieldset>
+            <legend> Help Request Overview </legend>
+            <label for="message"> Help Message: </label>
+            <p id="message"> Help! I've fallen and I can't get up! </p>
+            <label for="reply"> Help Response: </label>
+            <p id="response"> I'll be free to help in 20 min. </p>
+           
+            <table id="helpers">
+                <caption> Accepted Helper(s): </caption>
+                <tr> <th scope="col"> Proximity </th>
+                     <th scope="col"> Username </th>
+                     <th scope="col"> Karma Level </th>
+                </tr>
+                <tr>
+                    <td> 0.2 miles </td> 
+                    <td> ToddTheDude </td> 
+                    <td> 100% </td> 
+                </tr>
+                
+            </table>
+        
+            
+        </fieldset>
+        <p> Only click Finished once you are finished being helped. </p>
+        <input type="submit" value="Finished" name="finished" />
+    </form>
+
+</body>
+</html>
+
+
