@@ -1,13 +1,22 @@
+<?php
+session_start();
+
+if(array_key_exists("userid", $_SESSION)){
+
+}else{
+	$_SESSION["message"] = "Help! I've fallen and I can't get up!";
+	$_SESSION["response"] = "I'll be free to help in 20 mins, try not to die."; 
+	$_SESSION["proximity"] = "0.2 Miles";
+	$_SESSION["karma"] = "100%";
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <!--
     by: Robert Airth
+    Modified By: Isaac Travers
     last modified: 4/4/2020
-
-    you can run this using the URL:
-    
-
 -->
 
 <head>
@@ -19,13 +28,13 @@
 
     <h2> Your request for help has been answered! </h2>
     <form method="get"
-          action="FILL IN PROPER PAGE HERE">
+          action="helpFound_processor.php">
         <fieldset>
             <legend> Help Request Overview </legend>
             <label for="message"> Help Message: </label>
-            <p id="message"> Help! I've fallen and I can't get up! </p>
+            <p id="message"> <?= $_SESSION["message"]?> </p>
             <label for="reply"> Help Response: </label>
-            <p id="response"> I'll be free to help in 20 min. </p>
+            <p id="response">  <?= $_SESSION["message"]?>  </p>
            
             <table id="helpers">
                 <caption> Accepted Helper(s): </caption>
@@ -34,9 +43,9 @@
                      <th scope="col"> Karma Level </th>
                 </tr>
                 <tr>
-                    <td> 0.2 miles </td> 
-                    <td> ToddTheDude </td> 
-                    <td> 100% </td> 
+                    <td> <?= $_SESSION["proximity"] ?> </td> 
+                    <td> <?= $_SESSION["userid"] ?> </td> 
+                    <td> <?= $_SESSION["karma"] ?> </td> 
                 </tr>
                 
             </table>
@@ -50,4 +59,8 @@
 </body>
 </html>
 
+<?php
 
+}//end if else statement
+
+?>
