@@ -12,9 +12,9 @@
    5. Notify those users
 */
 
+session_start();
 
-
-if(isset($_SESSION)){
+if(array_key_exists("userid", $_SESSION)){
  	//user is logged in, continue
 	$userID = $_SESSION["userid"];
 

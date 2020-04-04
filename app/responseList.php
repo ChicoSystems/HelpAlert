@@ -1,3 +1,29 @@
+<?php
+
+ session_start();
+if(!array_key_exists("userid", $_SESSION)){
+	//not logged in
+	header("Location: login.php");
+}else{
+
+	//get info from db here
+//	oci_select_statements	
+	
+
+	//assign variables from db to session
+	//assign info to session
+	$_SESSION["proximity"] = "0.3 Miles";
+
+	$data = Array();
+	$data.push({{"proximity":"0.3 Miles"},
+                   {"karma" : "100%"}});
+
+	$data.push({{"proximity":"0.7 Miles"},
+                   {"karma" : "22%"}});
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -34,7 +60,7 @@
                 <td> <input type="checkbox" checked="checked" name="opt0"> </td> 
             </tr>
             <tr>
-                <td> 0.3 miles </td> 
+                <td> <?= $_SESSION["proximity"] </td> 
                 <td> LocoMoco420 </td> 
                 <td> 98% </td> 
                 <td> I can help later today. </td>
@@ -103,4 +129,8 @@
 </body>
 </html>
 
+<?php
 
+}//end of if-else
+
+?>
