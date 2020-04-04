@@ -1,3 +1,13 @@
+<?php
+	//are we logged in already
+	if(isset($_SESSION)){
+        	//we must want to logout
+		destroy_session();
+		header("Location: login.php");
+	}else{
+		//display the form to the user
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -37,4 +47,7 @@
 </body>
 </html>
 
+<?php
+		}//end else statement
+?>
 

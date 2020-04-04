@@ -12,14 +12,14 @@ if(isset($_SESSION)){
 	session_destroy();
 
 	//reload login.html
-        header("Location: login.html");
+        header("Location: login.php");
 }else{
 	//No Session Exists, Create One and redirect to landing page
 	session_start();
 	$_SESSION["userid"] = $_GET["userid"];
 	$_SESSION["latitude"] = $_GET["lat"];
 	$_SESSION["longitude"] = $_GET["long"];	
-        header("Location: landing.html");
+        header("Location: landing.php");
 }
 
 
