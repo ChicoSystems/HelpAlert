@@ -1,5 +1,6 @@
 <?php
         session_start();
+
 	//are we logged in already
 	if(array_key_exists("userid", $_SESSION)){
         	//we must want to logout
