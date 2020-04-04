@@ -1,8 +1,10 @@
 <?php
+        session_start();
 	//are we logged in already
-	if(isset($_SESSION)){
+	if(array_key_exists("userid", $_SESSION)){
         	//we must want to logout
-		destroy_session();
+		session_unset();
+		session_destroy();
 		header("Location: login.php");
 	}else{
 		//display the form to the user
