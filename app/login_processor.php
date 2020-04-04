@@ -8,18 +8,15 @@
 
 //does a session exist?
 if(isset($_SESSION)){
-	//A Session Does Exist, that means we want to log out
-	session_destroy();
-
-	//reload login.html
-        header("Location: login.html");
+	//a session already exists, redirect to landing page
+        header("Location: landing.php");
 }else{
 	//No Session Exists, Create One and redirect to landing page
 	session_start();
 	$_SESSION["userid"] = $_GET["userid"];
 	$_SESSION["latitude"] = $_GET["lat"];
 	$_SESSION["longitude"] = $_GET["long"];	
-        header("Location: landing.html");
+        header("Location: landing.php");
 }
 
 

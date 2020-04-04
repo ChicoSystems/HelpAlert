@@ -1,3 +1,15 @@
+<?php
+        session_start();
+	//are we logged in already
+	if(array_key_exists("userid", $_SESSION)){
+        	//we must want to logout
+		session_unset();
+		session_destroy();
+		header("Location: login.php");
+	}else{
+		//display the form to the user
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -37,4 +49,7 @@
 </body>
 </html>
 
+<?php
+		}//end else statement
+?>
 

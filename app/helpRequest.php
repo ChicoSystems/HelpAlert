@@ -1,13 +1,20 @@
+<?php
+session_start();
+
+if(!array_key_exists("userid", $_SESSION)){
+	//we're not logged in, redirect user
+	header("Location: login.php");
+}else{
+	//we are logged in, show the form
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <!--
     by: Robert Airth
     last modified: 4/4/2020
-
-    you can run this using the URL:
-    
-
 -->
 
 <head>
@@ -38,4 +45,8 @@
 </body>
 </html>
 
+<?php
 
+}//end else statement
+
+?>

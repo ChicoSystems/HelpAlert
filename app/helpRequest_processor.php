@@ -13,23 +13,25 @@
 */
 
 
-session_start();
-//check if logged in
-$_SESSION["username"] = "testuser";
-$_SESSION["userid"] = "00001";
 
-if(array_key_exists("username", $_SESSION)){
+if(isset($_SESSION)){
  	//user is logged in, continue
-	$username = $_SESSION["username"];
 	$userID = $_SESSION["userid"];
 
 	//get message and location
 	$message = $_GET["message"];
 	$lat = $_GET["lat"];
 	$long = $_GET["long"];
-	echo "Creating Request for meeting ".$username." ".$message." ".$lat." ".$long;
+	//echo "Creating Request for meeting ".$username." ".$message." ".$lat." ".$long;
+  
+        //use oci_connect to make a request to the db to insert a meeting.
+        TODO:	
+
+	//redirect user to landing page when oci_connect is done with its thing
+	header("Location: landing.php");
 }else{
 	//display login page
+        header("Location: login.php");
 }
 
 
