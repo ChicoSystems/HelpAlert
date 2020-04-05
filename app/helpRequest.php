@@ -34,7 +34,7 @@ session_start();
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-  <a class="pure-menu-heading" href="landing.php"><img src="I_dont_like_this.png" width="250" height="50"></a>
+  <a class="pure-menu-heading" href="landing.php"><img src="try_deez_nuts.png" width="250" height="50"></a>
 
         <ul class="pure-menu-list">
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
