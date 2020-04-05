@@ -7,6 +7,10 @@
         //require_once("functions.php") 
 
       //  $help_requests = getActiveHelpRequests();
+
+    if(array_key_exists("confirm0", $_GET) || array_key_exists("confirm1", $_GET)){
+        header("Location: helpConfirm.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -21,7 +25,8 @@
     <title>HelpAlert Login</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" 
+           integrity="sha384-" crossorigin="anonymous">
     
 
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
@@ -33,7 +38,7 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Help Alert!</a>
+        <a class="pure-menu-heading" href="landing.php"><img src="I_dont_like_this.png" width="250" height="50"></a>
 
         <ul class="pure-menu-list">
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
@@ -45,20 +50,19 @@
 
 <div class="background centered-content-wide">
     <div class=" centered-content-wide">
-
-    <h1 class="splash-subhead centered-content">HelpAlert!</h1>
-    <h2 class="splash-subhead  centered-content">The #1 community-help app</h2>
+<br/>          
+<br/>
+<br/>
 
         <a class="pure-form-input centered-content blackFont largeFont boldFont"
            style="text-decoration: none" href="helpRequest.php">Create Help Request</a>
 
     
     <form  method="get"
-          action=".php">
+          action="landing.php">
 
 
-          
-        <h3 class="centered-content table-heading">Notifications:</h3>
+        <h3 class="centered-content whiteFont">Notifications:</h3>
         <fieldset class=" centered-content-wide" >
         <legend class="splash-subhead centered-content">Unanswered Help Requests</legend>
         <table class=" table">
@@ -168,6 +172,7 @@
     </form>
     </div>
 </div>
+
 </body>
 </html>
 
