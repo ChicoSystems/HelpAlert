@@ -1,15 +1,18 @@
 <?php
+
 session_start();
 
-if(array_key_exists("userid", $_SESSION)){
-    /*user is not logged in, redirect to login*/
-    header("Location: login.php");
+//if(array_key_exists("userid", $_SESSION)){
+    //user is not logged in, redirect to login
+//    header("Location: login.php");
 
-}else{
+//}else{
 	$_SESSION["message"] = "Help! I've fallen and I can't get up!";
 	$_SESSION["response"] = "I'll be free to help in 20 mins, try not to die."; 
 	$_SESSION["proximity"] = "0.2 Miles";
 	$_SESSION["karma"] = "100%";
+	$_SESSION["userid"] = "ATFtroll22";
+
 ?>
 
 <!DOCTYPE html>
@@ -47,19 +50,19 @@ if(array_key_exists("userid", $_SESSION)){
     </div>
 </div>
 
-<div class="background centered-content-wide">
-    <div class=" centered-content-wide">
-    <h2> Your request for help has been answered! </h2>
+<div class=" splash-subhead background centered-content-wide">
+    <div class="splash">
+    <h2 class="splash-subhead table-heading"> Your request for help has been answered! </h2>
     <form method="get"
-          action="helpFound_processor.php">
-        <fieldset>
-            <legend> Help Request Overview </legend>
-            <label for="message"> Help Message: </label>
-            <p id="message"> <?= $_SESSION["message"]?> </p>
-            <label for="reply"> Help Response: </label>
-            <p id="response">  <?= $_SESSION["message"]?>  </p>
+          action="helpRating.html">
+        <fieldset class="centered-content-wide">
+            <legend class="splash-subhead centered-content"> Help Request Overview </legend>
+            <label class="whiteFont" for="message"> Help Message: </label>
+            <p class="basicFont"  id="message"> <?= $_SESSION["message"]?> </p>
+            <label class="whiteFont" for="reply"> Help Response: </label>
+            <p class="basicFont id="response">  <?= $_SESSION["message"]?>  </p>
            
-            <table id="helpers">
+            <table class="table" id="helpers">
                 <caption> Accepted Helper(s): </caption>
                 <tr> <th scope="col"> Proximity </th>
                      <th scope="col"> Username </th>
@@ -76,7 +79,7 @@ if(array_key_exists("userid", $_SESSION)){
             
         </fieldset>
         <p> Only click Finished once you are finished being helped. </p>
-        <input type="submit" value="Finished" name="finished" />
+        <input class="blackFont boldFont" type="submit" value="Finished" name="finished" />
     </form>
 </div>
 
@@ -85,6 +88,6 @@ if(array_key_exists("userid", $_SESSION)){
 
 <?php
 
-}//end if else statement
+//}//end of statement
 
 ?>

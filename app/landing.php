@@ -2,14 +2,12 @@
     session_start();
     if(!array_key_exists("userid", $_SESSION)){
          //user is not logged in, redirect
-	header("Location: login.php");   
+	//header("Location: login.php");   
     }else{
-/*    require_once("functions.php") */
+        //require_once("functions.php") 
 
-    /*$help_requests = getActiveHelpRequests();*/
-
+      //  $help_requests = getActiveHelpRequests();
 ?>
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -51,11 +49,13 @@
     <h1 class="splash-subhead centered-content">HelpAlert!</h1>
     <h2 class="splash-subhead  centered-content">The #1 community-help app</h2>
 
+        <a class="pure-form-input centered-content blackFont largeFont boldFont"
+           style="text-decoration: none" href="helpRequest.php">Create Help Request</a>
+
     
     <form  method="get"
-          action="FILL IN PROPER PAGE HERE">
+          action=".php">
 
-        <input class="pure-form-input centered-content blackFont largeFont boldFont"  type="submit" value="Create Help Request" name="createRequest" id="createRequest" />
 
           
         <h3 class="centered-content table-heading">Notifications:</h3>
@@ -174,6 +174,6 @@
 
 <?php
 
-}//end elsec
+}//end else
 
 ?>
