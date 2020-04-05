@@ -31,31 +31,31 @@ prompt
 
 insert
 into user
-VALUES('00001', '40.738179', '-124.219267', '0.95');
+VALUES('00001', 'LittleOldLadyLOL', '40.738179', '-124.219267', '0.95');
 
 insert
 into user
-VALUES('00002', '40.872958', '-124.077008', '0.22');
-
-
-insert
-into user
-VALUES('00003', '40.797683', '-124.166526', '0.56');
+VALUES('00002', 'childEntrepreneur112', '40.872958', '-124.077008', '0.22');
 
 
 insert
 into user
-VALUES('00004', '40.757678', '-124.178240', '0.93');
+VALUES('00003', 'familyMan234', '40.797683', '-124.166526', '0.56');
 
 
 insert
 into user
-VALUES('00005', '40.592865', '-124.158786', '0.22');
+VALUES('00004', 'CathyTheCooker', '40.757678', '-124.178240', '0.93');
 
 
 insert
 into user
-VALUES('00006', '40.872958', '-124.077008', '0.44');
+VALUES('00005', 'CarpenterMcGee22', '40.592865', '-124.158786', '0.22');
+
+
+insert
+into user
+VALUES('00006', 'AdamCarter', '40.872958', '-124.077008', '0.44');
 
 
 

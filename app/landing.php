@@ -4,9 +4,10 @@
          //user is not logged in, redirect
 	header("Location: login.php");   
     }else{
-    require_once("functions.php")
+    require_once("functions.php");
 
     $help_requests = getActiveHelpRequests();
+	print_r($help_requests);
 
 ?>
 
