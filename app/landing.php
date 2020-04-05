@@ -43,53 +43,34 @@
         <fieldset>
         <legend>Unanswered Help Requests</legend>
         <table>
-            <tr> <th scope="col"> Proximity </th>
+            <tr> <th scope="col"> LAT / LONG </th>
                  <th scope="col"> Username </th>
                  <th scope="col"> Karma Level </th>
                  <th scope="col"> Message </th>
                  <th scope="col"> Help? </th>
                  <th scope="col"> Response </th>
             </tr>
+
+<?php
+
+for($i = 0; $i < sizeof($help_requests); $i++){
+
+?>
+
             <tr>
-                <td> 0.2 miles </td> 
-                <td> LittleOldLadyLOL </td> 
-                <td> 100% </td> 
-                <td> I need my pickle jar opened. </td>
-                <td> <input type="checkbox" value="Help" name="opt0"> </td>
-                <td> <input type="text" placeholder="Type response here" name="response0"/> </td> 
+                <td> <?= $help_requests[$i]["lat"] ?> / <?= $help_requests[$i]["long"] ?> </td> 
+                <td> <?= $help_requests[$i]["requesting_user_name"] ?> </td> 
+                <td> <?= $help_requests[$i]["karma"] * 100 ?> % </td> 
+                <td> <?= $help_requests[$i]["request_text"] ?> </td> 
+                <td> <input type="checkbox" value="Help" name="opt<?= $i ?>"> </td>
+                <td> <input type="text" placeholder="Type response here" name="response<?= $i ?>"/> </td> 
             </tr>
-            <tr>
-                <td> 0.3 miles </td> 
-                <td> childEntrepreneur112 </td> 
-                <td> 90% </td> 
-                <td> I need help starting my lawnmower. </td>
-                <td> <input type="checkbox" value="Help" name="opt1">  </td> 
-                <td> <input type="text" placeholder="Type response here" name="response1"/> </td> 
-            </tr>
-            <tr>
-                <td> 0.9 miles </td> 
-                <td> familyMan234 </td> 
-                <td> 100% </td> 
-                <td> I need help setting up decorations. </td>
-                <td> <input type="checkbox" value="Help" name="opt2">  </td> 
-                <td> <input type="text" placeholder="Type response here" name="response2"/> </td> 
-            </tr>
-            <tr>
-                <td> 1.2 miles </td> 
-                <td> CathyTheCooker </td> 
-                <td> 100% </td> 
-                <td> I need 2 tablespoons of chili powder. </td>
-                <td> <input type="checkbox" value="Help" name="opt3">  </td> 
-                <td> <input type="text" placeholder="Type response here" name="response3"/> </td> 
-            </tr>
-            <tr>
-                <td> 1.3 miles </td> 
-                <td> CarpenterMcGee22 </td> 
-                <td> 90% </td> 
-                <td> I need some help unloading lumber from my truck. </td>
-                <td> <input type="checkbox" value="Help" name="opt4">  </td> 
-                <td> <input type="text" placeholder="Type response here" name="response4"/> </td> 
-            </tr>
+<?php
+
+} //end for loop
+
+?> 
+
         </table>
         <input type="submit" value="Send Replies for help" />
     </fieldset>

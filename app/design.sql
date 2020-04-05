@@ -17,7 +17,7 @@ create table appuser(
 	username	varchar(20),
         latitude	number(9, 6),
         longitude       number(9, 6),
-	karma		number(1, 2),
+	karma		number(3, 2),
         PRIMARY KEY(user_id)
 );
 
@@ -95,3 +95,5 @@ create table user_rejects_meeting (
 	FOREIGN KEY(user_id) references appuser,
 	FOREIGN KEY(meeting_id) references meeting
 );
+
+commit;
