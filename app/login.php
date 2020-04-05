@@ -57,8 +57,8 @@
             <legend class="splash-subhead centered-content"> Log In</legend>
             <label class="r1c1 splash-subhead" for="username"> user ID:   </label>
             <input class="r1c2 blackFont" type="text" name="userid" id="userid" placeholder="userid IE 00001"/> <br/> 
-            <!--<label class="r2c1 splash-subhead" for="password"> Password: </label>
-            <input class="r2c2 blackFont" type="password" name="password" id="password" placeholder="Password"/>-->
+            <label class="r2c1 splash-subhead" for="password"> Password: </label>
+            <input class="r2c2 blackFont" type="password" name="password" id="password" placeholder="Password"/>
         </fieldset>
         <fieldset class="splash-subhead grid-layout-two-25-75">
             <legend class="splash-subhead centered-content"> Location </legend>
