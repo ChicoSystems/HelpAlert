@@ -4,9 +4,9 @@
          //user is not logged in, redirect
 	header("Location: login.php");   
     }else{
-    require_once("functions.php")
+/*    require_once("functions.php") */
 
-    $help_requests = getActiveHelpRequests();
+    /*$help_requests = getActiveHelpRequests();*/
 
 ?>
 
@@ -15,33 +15,53 @@
 
 <!--
     by: Robert Airth
-    modifid: Isaac Travers   
-    last modified: 4/4/2020
-   
+	Modified by: Isaac Travers and Robert Airth
+    last modified: 4/5/2020
 -->
 
 <head>
-    <title>HelpAlert Landing</title>
+    <title>HelpAlert Login</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/marketing.css">
 </head>
 
-<body>
-    <h1>HelpAlert!</h1>
-    <h2>The #1 community-help app</h2>
+<body class="background centered-content-wide">
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Help Alert!</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Profile</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Settings</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+
+    <h1 class="splash-subhead centered-content">HelpAlert!</h1>
+    <h2 class="splash-subhead  centered-content">The #1 community-help app</h2>
 
     
-    <form method="get"
+    <form  method="get"
           action="FILL IN PROPER PAGE HERE">
 
-        <input type="submit" value="Settings" name="settings" id="settings" />
-        <input type="submit" value="Profile" name="profile" id="profile" />
-        <input type="submit" value="Create Help Request" name="createRequest" id="createRequest" />
+        <input class="pure-form-input centered-content"  type="submit" value="Create Help Request" name="createRequest" id="createRequest" />
 
           
-        <h3>Notifications:</h3>
-        <fieldset>
-        <legend>Unanswered Help Requests</legend>
-        <table>
+        <h3 class="splash-subhead">Notifications:</h3>
+        <fieldset class="spash-subhead centered-content-wide" >
+        <legend class="table-heading centered-content">Unanswered Help Requests</legend>
+        <table class=" table">
             <tr> <th scope="col"> Proximity </th>
                  <th scope="col"> Username </th>
                  <th scope="col"> Karma Level </th>
@@ -54,7 +74,7 @@
                 <td> LittleOldLadyLOL </td> 
                 <td> 100% </td> 
                 <td> I need my pickle jar opened. </td>
-                <td> <input type="checkbox" value="Help" name="opt0"> </td>
+                <td> <input class="checkbox" type="checkbox" value="Help" name="opt0"> </td>
                 <td> <input type="text" placeholder="Type response here" name="response0"/> </td> 
             </tr>
             <tr>
@@ -90,10 +110,10 @@
                 <td> <input type="text" placeholder="Type response here" name="response4"/> </td> 
             </tr>
         </table>
-        <input type="submit" value="Send Replies for help" />
+        <input class="pure-form-input" type="submit" value="Send Replies for help" />
     </fieldset>
 
-    <fieldset>
+    <fieldset class="splash-subhead grid-layout-two-25-75">
         <legend>Pending Help Requests</legend>
         <table>
             <tr> 
@@ -123,7 +143,7 @@
         </table>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="splash-subhead grid-layout-two-25-75">
         <legend>Active Help Requests</legend>
         <table>
             <tr> 
@@ -146,7 +166,8 @@
 
 
     </form>
-
+    </div>
+</div>
 </body>
 </html>
 

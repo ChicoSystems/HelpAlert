@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/marketing.css">
 </head>
 
-<body>
+<body class="background">
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
@@ -56,17 +56,17 @@
         <fieldset class="splash-subhead grid-layout-two-25-75">
             <legend class="splash-subhead centered-content"> Log In</legend>
             <label class="r1c1 splash-subhead" for="username"> user ID:   </label>
-            <input class="r1c2" type="text" name="userid" id="userid" placeholder="userid IE 00001"/> <br/> 
-            <label class="r2c1 splash-subhead" for="password"> Password: </label>
-            <input class="r2c2" type="password" name="password" id="password" placeholder="Password"/>
+            <input class="r1c2 blackFont" type="text" name="userid" id="userid" placeholder="userid IE 00001"/> <br/> 
+            <!--<label class="r2c1 splash-subhead" for="password"> Password: </label>
+            <input class="r2c2 blackFont" type="password" name="password" id="password" placeholder="Password"/>-->
         </fieldset>
         <fieldset class="splash-subhead grid-layout-two-25-75">
             <legend class="splash-subhead centered-content"> Location </legend>
             <p class="r1c1-2">Leave these fields blank if using Location Services</p>
             <label class="r2c1 splash-subhead" for="lat"> Latitude: </label>
-            <input class="r2c2" type="number" step="0.000001" name="lat" id="lat" /> <br/>
+            <input class="r2c2 blackFont" type="number" step="0.000001" name="lat" id="lat" /> <br/>
             <label class="r3c1 splash-subhead" for="long"> Longitude: </label>
-            <input class="r3c2" type="number" step="0.000001" name="long" id="long" />
+            <input class="r3c2 blackFont" type="number" step="0.000001" name="long" id="long" />
         </fieldset>
             <input class="pure-button pure-button-primary" type="submit" value="Login" name="login" />
             <input class="pure-button pure-button-primary" type="submit" value="Forgot Username/Password" name="forgot" />
