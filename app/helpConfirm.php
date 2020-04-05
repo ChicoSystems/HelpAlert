@@ -24,6 +24,7 @@ if(!array_key_exists("userid", $_SESSION)){
 <head>
     <title>HelpAlert Confirmation</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/marketing.css">
 </head>
 
 <body>
