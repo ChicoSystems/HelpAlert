@@ -16,6 +16,7 @@ create table user(
 	USER_ID		char(5) NOT NULL,
         latitude	number(9, 6),
         longitude       number(9, 6),
+	karma		number(1, 2),
         PRIMARY KEY(user_id)
 );
 
@@ -36,7 +37,8 @@ create table meeting(
         responding_user		char(5),
 	latitude		number(9, 6),
 	longitude		number(9, 6),
-        text                    varchar2(255),
+        request_text            varchar2(255),
+	response_text            varchar2(255),
         accepting_booking_user	char(5),
         deny_booking_user       char(5),
         PRIMARY KEY(meeting_id),
