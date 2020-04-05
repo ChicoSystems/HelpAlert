@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!array_key_exists("userid", $_SESSION){
+if(!array_key_exists("userid", $_SESSION)){
 	//user is not logged in, redirect to login
 	header("Location: login.php");
 }else{
@@ -17,7 +17,7 @@ if(!array_key_exists("userid", $_SESSION){
 
 <!--
     by: Robert Airth
-    modified by: Isaac Travers
+    modified by: Isaac Travers & Robert Airth
     last modified: 4/4/2020
 -->
 

@@ -1,25 +1,68 @@
 <?php
 
- session_start();
+session_start();
 if(!array_key_exists("userid", $_SESSION)){
 	//not logged in
 	header("Location: login.php");
-}else{
+}
+else
+{
 
-	//get info from db here
-//	oci_select_statements	
+//get info from db here
+//oci_select_statements	
 	
 
 	//assign variables from db to session
 	//assign info to session
-	$_SESSION["proximity"] = "0.3 Miles";
+	$data = array();
+    $data.array_push(array("proximity" => "0.2 Miles",
+                   "username" => "ToddTheDude",
+                   "karma" => "100%",
+                   "response" => "I'll be free to help in 20 min"));
+    $data.array_push(array("proximity":"0.3 Miles",
+                   "username":"LocoMoco420",
+                   "karma" : "98%",
+                   "response":"I can help later today."));
 
-	$data = Array();
-	$data.push({{"proximity":"0.3 Miles"},
-                   {"karma" : "100%"}});
+    $data.array_push(array("proximity"=>"0.9 Miles",
+                   "username"=>"TigerKing39",
+                   "karma" => "10%",
+                   "response"=>"I'll help you if you have a tiger."));
 
-	$data.push({{"proximity":"0.7 Miles"},
-                   {"karma" : "22%"}});
+    $data.array_push(array("proximity"=>"1.2 Miles",
+                   "username"=>"KorbenDallas100",
+                   "karma" => "100%",
+                   "response"=>"Negative, I am a meat popsicle."));
+
+    $data.array_push(array("proximity"=>"1.3 Miles",
+                   "username"=>"CheckTheDeck22",
+                   "karma" => "90%",
+                   "response"=>"I'm free after 2pm. "));
+
+    $data.array_push(array("proximity"=>"1.7 Miles",
+                   "username"=>"NismoBoy19",
+                   "karma" => "100%",
+                   "response"=>"I've never done that before but I'll give it a shot."));
+
+    $data.array_push(array("proximity"=>"1.9 Miles",
+                   "username"=>"WakeyBakey707",
+                   "karma" => "0%",
+                   "response"=>"Trade labor for 215? "));
+
+    $data.array_push(array("proximity"=>"2.0 Miles",
+                   "username"=>"626Drift",
+                   "karma" => "100%",
+                   "response"=>"I am not very good at that, but I'm willing to help you do it."));
+
+    $data.array_push(array("proximity"=>"2.1 Miles",
+                   "username"=>"SickManji69",
+                   "karma" => "100%",
+                   "response"=>"I'm really good at that."));
+
+    $data.array_push(array("proximity"=>"2.4 Miles",
+                   "username"=>"ATFtrollLOL",
+                   "karma" => "80%",
+                   "response"=>"I'm free after 4:30pm today."));
 
 ?>
 
@@ -44,84 +87,31 @@ if(!array_key_exists("userid", $_SESSION)){
 <body>
     <form method="get"
           action="FILL IN PROPER PAGE HERE">
+        <h3>These people want to help you</h3>  
         <table>
-            <caption> These users want to help you: </caption>
             <tr> <th scope="col"> Proximity </th>
                  <th scope="col"> Username </th>
                  <th scope="col"> Karma Level </th>
                  <th scope="col"> Response </th>
                  <th scope="col"> Accept ? </th>
             </tr>
-            <tr>
-                <td> 0.2 miles </td> 
-                <td> ToddTheDude </td> 
-                <td> 100% </td> 
-                <td> I'll be free to help in 20 min. </td>
-                <td> <input type="checkbox" checked="checked" name="opt0"> </td> 
-            </tr>
-            <tr>
-                <td> <?= $_SESSION["proximity"] </td> 
-                <td> LocoMoco420 </td> 
-                <td> 98% </td> 
-                <td> I can help later today. </td>
-                <td> <input type="checkbox"  name="opt1"> </td> 
-            </tr>
-            <tr>
-                <td> 0.9 miles </td> 
-                <td> TigerKing39 </td> 
-                <td> 10% </td> 
-                <td> I'll help you if you have a tiger. </td>
-                <td> <input type="checkbox"  name="opt2"> </td> 
-            </tr>
-            <tr>
-                <td> 1.2 miles </td> 
-                <td> KorbenDallas100 </td> 
-                <td> 100% </td> 
-                <td> Negative, I am a meat popsicle. </td>
-                <td> <input type="checkbox"  name="opt3"> </td> 
-            </tr>
-            <tr>
-                <td> 1.3 miles </td> 
-                <td> CheckTheDeck22 </td> 
-                <td> 90% </td> 
-                <td> I'm free after 2pm. </td>
-                <td> <input type="checkbox"  name="opt4"> </td> 
-            </tr>
-            <tr>
-                <td> 1.7 miles </td> 
-                <td> NismoBoy19 </td> 
-                <td> 100% </td> 
-                <td> I've never done that before but I'll give it a shot. </td>
-                <td> <input type="checkbox"  name="opt5"> </td> 
-            </tr>
-            <tr>
-                <td> 1.9 miles </td> 
-                <td> WakeyBakey707 </td> 
-                <td> 0% </td> 
-                <td> Trade labor for 215? </td>
-                <td> <input type="checkbox"  name="opt6"> </td> 
-            </tr>
-            <tr>
-                <td> 2.0 miles </td> 
-                <td> 626Drift </td> 
-                <td> 100% </td> 
-                <td> I am not very good at that, but I'm willing to help you do it. </td>
-                <td> <input type="checkbox"  name="opt7"> </td> 
-            </tr>
-            <tr>
-                <td> 2.1 miles </td> 
-                <td> SickManji69 </td> 
-                <td> 100% </td> 
-                <td> I'm really good at that. </td>
-                <td> <input type="checkbox"  name="opt8"> </td> 
-            </tr>
-            <tr>
-                <td> 2.4 miles </td> 
-                <td> ATFtrollLOL </td> 
-                <td> 80% </td>
-                <td> I'm free after 4:30pm today. </td> 
-                <td> <input type="checkbox"  name="opt9"> </td> 
-            </tr>
+            <?php
+            foreach($data as $temp1)
+            {
+                             
+                    ?>
+                    <tr>
+                    <td><?=$temp1["proximity"]?></td>
+                    <td><?=$temp1["username"]?></td>
+                    <td><?=$temp1["karma"]?></td>
+                    <td><?=$temp1["response"]?></td>
+                    </tr>
+                    <?php
+                                
+            }
+            ?>
+
+
         </table>
         <input type="submit" value="Notify Helpers" />
     </form>
