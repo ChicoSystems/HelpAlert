@@ -21,7 +21,7 @@ delete
 from meeting;
 
 delete
-from user;
+from appuser;
 
 
 
@@ -30,31 +30,31 @@ prompt CREATE FAKE USERS
 prompt
 
 insert
-into user
+into appuser
 VALUES('00001', '40.738179', '-124.219267');
 
 insert
-into user
+into appuser
 VALUES('00002', '40.872958', '-124.077008');
 
 
 insert
-into user
+into appuser
 VALUES('00003', '40.797683', '-124.166526');
 
 
 insert
-into user
+into appuser
 VALUES('00004', '40.757678', '-124.178240');
 
 
 insert
-into user
+into appuser
 VALUES('00005', '40.592865', '-124.158786');
 
 
 insert
-into user
+into appuser
 VALUES('00006', '40.872958', '-124.077008');
 
 
@@ -84,7 +84,7 @@ VALUES('00004', '00001');
 
 insert
 into meeting
-VALUES('00006', '00002', NULL, '40.872958', '-124.077008',
+VALUES('00002', '00002', NULL, '40.872958', '-124.077008',
        'My Car tire is flat. Can someone help me fill it up?',
        NULL, NULL);
 
