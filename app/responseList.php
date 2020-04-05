@@ -19,7 +19,7 @@ else
     $tempy = array("proximity" => "0.2 Miles",
                    "username" => "ToddTheDude",
                    "karma" => "100%",
-                   "response" => "I'll be free to help in 20 min");                                $
+                   "response" => "I'll be free to help in 20 min");
     array_push($data, $tempy);
 
     $tempy = array("proximity"=>"0.3 Miles",
