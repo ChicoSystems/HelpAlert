@@ -119,12 +119,14 @@ session_start();
         </ul>
     </div>
 </div>
-
+<br/>
+<br/>
+<br/>
 <div class="background centered-content-wide">
     <div class=" centered-content-wide">
     <form method="get"
           action="helpFound.php">
-        <h3>These people want to help you</h3>
+        <h3 class="splash-subhead">These people want to help you</h3>
         <table class="table">
             <tr> <th scope="col"> Proximity </th>
                  <th scope="col"> Username </th>
