@@ -32,7 +32,7 @@ if(!array_key_exists("userid", $_SESSION)){
     <h2> Your offer for help has been accepted! </h2>
     <form method="get"
           action="helpConfirm_processor.php">
-        <fieldset>
+        <fieldset class="">
             <legend> Help Request Confirmation</legend>
             <label for="message"> Help Message: </label>
             <p id="message"> <?= $helpMessage ?></p>
