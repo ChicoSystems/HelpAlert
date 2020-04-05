@@ -11,11 +11,12 @@
  * their latitude and longitude
  *****************************************************/
 
-drop table appuser cascade constraints;
-create table appuser(
+drop table user cascade constraints;
+create table user(
 	USER_ID		char(5) NOT NULL,
         latitude	number(9, 6),
         longitude       number(9, 6),
+	karma		number(1, 2),
         PRIMARY KEY(user_id)
 );
 
@@ -36,14 +37,15 @@ create table meeting(
         responding_user		char(5),
 	latitude		number(9, 6),
 	longitude		number(9, 6),
-        text                    varchar2(255),
-        accept_booking_user	char(5),
+        request_text            varchar2(255),
+	response_text            varchar2(255),
+        accepting_booking_user	char(5),
         deny_booking_user       char(5),
         PRIMARY KEY(meeting_id),
-        FOREIGN KEY(requesting_user) references appuser(user_id),
-        FOREIGN KEY(responding_user) references appuser(user_id),
-	FOREIGN KEY(accept_booking_user) references appuser(user_id),
-        FOREIGN KEY(deny_booking_user) references appuser(user_id)
+        FOREIGN KEY(requesting_user) references user(user_id),
+        FOREIGN KEY(responding_user) references user(user_id),
+	FOREIGN KEY(accept_booking_user) references user(user_id),
+        FOREIGN KEY(deny_booking_user) references user(user_id)
 );
 
 /****************************************************
@@ -57,7 +59,7 @@ create table user_requests_meeting(
 	USER_ID		char(5) NOT NULL,
 	MEETING_ID	char(5) NOT NULL,
 	PRIMARY KEY(user_id, meeting_id),
-	FOREIGN KEY(user_id) references appuser,
+	FOREIGN KEY(user_id) references user,
 	FOREIGN KEY(meeting_id) references meeting
 );
 
@@ -73,7 +75,7 @@ create table user_accepts_meeting (
 	USER_ID		char(5) NOT NULL,
 	MEETING_ID	char(5) NOT NULL,
 	PRIMARY KEY(user_id, meeting_id),
-	FOREIGN KEY(user_id) references appuser,
+	FOREIGN KEY(user_id) references user,
 	FOREIGN KEY(meeting_id) references meeting
 );
 
@@ -89,6 +91,6 @@ create table user_rejects_meeting (
 	USER_ID		char(5) NOT NULL,
 	MEETING_ID	char(5) NOT NULL,
 	PRIMARY KEY(user_id, meeting_id),
-	FOREIGN KEY(user_id) references appuser,
+	FOREIGN KEY(user_id) references user,
 	FOREIGN KEY(meeting_id) references meeting
 );
