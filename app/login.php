@@ -36,7 +36,7 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Help Alert!</a>
+  <a class="pure-menu-heading" href="landing.php"><img src="I_dont_like_this.png" width="250" height="50"></a>
 
         <ul class="pure-menu-list">
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
@@ -57,8 +57,8 @@
             <legend class="splash-subhead centered-content"> Log In</legend>
             <label class="r1c1 splash-subhead" for="username"> user ID:   </label>
             <input class="r1c2 blackFont" type="text" name="userid" id="userid" placeholder="userid IE 00001"/> <br/> 
-            <!--<label class="r2c1 splash-subhead" for="password"> Password: </label>
-            <input class="r2c2 blackFont" type="password" name="password" id="password" placeholder="Password"/>-->
+            <label class="r2c1 splash-subhead" for="password"> Password: </label>
+            <input class="r2c2 blackFont" type="password" name="password" id="password" placeholder="Password"/>
         </fieldset>
         <fieldset class="splash-subhead grid-layout-two-25-75">
             <legend class="splash-subhead centered-content"> Location </legend>
