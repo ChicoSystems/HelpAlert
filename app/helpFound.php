@@ -1,15 +1,18 @@
 <?php
+
 session_start();
 
-if(array_key_exists("userid", $_SESSION){
+//if(array_key_exists("userid", $_SESSION)){
     //user is not logged in, redirect to login
-	header("Location: login.php");
+//    header("Location: login.php");
 
-}else{
+//}else{
 	$_SESSION["message"] = "Help! I've fallen and I can't get up!";
 	$_SESSION["response"] = "I'll be free to help in 20 mins, try not to die."; 
 	$_SESSION["proximity"] = "0.2 Miles";
 	$_SESSION["karma"] = "100%";
+	$_SESSION["userid"] = "ATFtroll22";
+
 ?>
 
 <!DOCTYPE html>
@@ -17,28 +20,49 @@ if(array_key_exists("userid", $_SESSION){
 
 <!--
     by: Robert Airth
-    Modified By: Isaac Travers & Robert Airth
-    last modified: 4/4/2020
+	Modified by: Isaac Travers and Robert Airth
+    last modified: 4/5/2020
 -->
 
 <head>
-    <title>HelpAlert Request Summary</title>
+    <title>HelpAlert Login</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/marketing.css">
 </head>
 
-<body>
+<body class="background centered-content">
 
-    <h2> Your request for help has been answered! </h2>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Help Alert!</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Profile</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Settings</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class=" splash-subhead background centered-content-wide">
+    <div class="splash">
+    <h2 class="splash-subhead table-heading"> Your request for help has been answered! </h2>
     <form method="get"
-          action="helpFound_processor.php">
-        <fieldset>
-            <legend> Help Request Overview </legend>
-            <label for="message"> Help Message: </label>
-            <p id="message"> <?= $_SESSION["message"]?> </p>
-            <label for="reply"> Help Response: </label>
-            <p id="response">  <?= $_SESSION["message"]?>  </p>
+          action="helpRating.html">
+        <fieldset class="centered-content-wide">
+            <legend class="splash-subhead centered-content"> Help Request Overview </legend>
+            <label class="whiteFont" for="message"> Help Message: </label>
+            <p class="basicFont"  id="message"> <?= $_SESSION["message"]?> </p>
+            <label class="whiteFont" for="reply"> Help Response: </label>
+            <p class="basicFont id="response">  <?= $_SESSION["message"]?>  </p>
            
-            <table id="helpers">
+            <table class="table" id="helpers">
                 <caption> Accepted Helper(s): </caption>
                 <tr> <th scope="col"> Proximity </th>
                      <th scope="col"> Username </th>
@@ -55,14 +79,15 @@ if(array_key_exists("userid", $_SESSION){
             
         </fieldset>
         <p> Only click Finished once you are finished being helped. </p>
-        <input type="submit" value="Finished" name="finished" />
+        <input class="blackFont boldFont" type="submit" value="Finished" name="finished" />
     </form>
+</div>
 
 </body>
 </html>
 
 <?php
 
-}//end if else statement
+//}//end of statement
 
 ?>
