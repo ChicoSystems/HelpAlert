@@ -70,16 +70,17 @@ label {
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
  */
+
 .pure-button {
-    background-color: #1f8dd6;
+    background-color: white;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
 }
 
-a.pure-button-primary {
-    background: white;
-    color: #1f8dd6;
+.pure-button-primary {
+    background: #2d3e50;
+    color: white;
     border-radius: 5px;
     font-size: 120%;
 }
@@ -106,7 +107,7 @@ a.pure-button-primary {
 }
 
 .home-menu .pure-menu-heading {
-    color: white;
+    color: #ff4433;
     font-weight: 400;
     font-size: 120%;
 }
@@ -116,13 +117,13 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: white;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    color: #ff4433;
 }
 
 
@@ -132,7 +133,7 @@ a.pure-button-primary {
  */
 
 .splash-container {
-    background: #1f8dd6;
+    background: #ff4433;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -143,6 +144,81 @@ a.pure-button-primary {
     position: fixed !important;
 }
 
+.centered-content{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-layout-two-50-50{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(2em, auto);
+}
+
+.grid-layout-two-25-75{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-auto-rows: minmax(2em, auto);
+}
+
+
+.r1c1-2{
+    grid-row: 1;
+    grid-column: 1/3;
+}    
+
+.r1c1{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+
+.r1c2{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+
+.r2c1{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+
+.r2c2{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+
+.r3c1{
+    grid-row: 3;
+    grid-column: 1;
+}
+
+
+.r3c2{
+    grid-row: 3;
+    grid-column: 2;
+}
+
+
+.r4c1{
+    grid-row: 4;
+    grid-column: 1;
+}
+
+
+
+.r4c2{
+    grid-row: 4;
+    grid-column: 2;
+}
+
+
+
+
 .splash {
     /* absolute center .splash within .splash-container */
     width: 80%;
@@ -152,6 +228,7 @@ a.pure-button-primary {
     top: 100px; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
+    border-weight: bold;
 }
 
 /* This is the main heading that appears on the blue section */
@@ -169,8 +246,9 @@ a.pure-button-primary {
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
     color: white;
+    font-weight: bold;
     letter-spacing: 0.05em;
-    opacity: 0.8;
+  
 }
 
 /*
