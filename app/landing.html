@@ -1,23 +1,13 @@
-<?php
-    session_start();
-    if(!array_key_exists("userid", $_SESSION)){
-         //user is not logged in, redirect
-	header("Location: login.php");   
-    }else{
-    require_once("functions.php")
-
-    $help_requests = getActiveHelpRequests();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <!--
     by: Robert Airth
-    modifid: Isaac Travers   
     last modified: 4/4/2020
-   
+
+    you can run this using the URL:
+    
+
 -->
 
 <head>
@@ -151,8 +141,3 @@
 </html>
 
 
-<?php
-
-}//end elsec
-
-?>

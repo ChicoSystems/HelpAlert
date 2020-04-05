@@ -3,10 +3,10 @@ Help Alert - 2020 Hackathon
 
 DB Relation Structure for Help Alert's Core Functionality
 
-user(USER_ID, latitute, longitude)
+appuser(USER_ID, latitute, longitude, karma)
 
 meeting(MEETING_ID, requesting_user, responding_user, latitude, 
-        longitude, text, accept_booking_user, deny_booking_user)
+        longitude, request_text, response_test, accept_booking_user, deny_booking_user)
     foreign key (requesting_user) references user.user_id
     foreign key (responsing_user) references user.user_id 
     foreign key (accept_booking_user, references user.user_id
